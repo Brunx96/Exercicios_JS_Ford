@@ -17,3 +17,17 @@
 //saida de dados
 // = informar se o triangulo é equilátero, escaleno ou isócele
 // = motrar a saída do programa na console
+
+const p1 = prompt("Digite o tamanho do primeiro lado do triângulo:");
+const s1 = prompt("Digite o tamanho do segundo lado do triângulo:");
+const t1 = prompt("Digite o tamanho do terceiro lado do triângulo:");
+
+if (p1 === s1 && s1 === t1) {
+    alert ("Seu triangulo é Equilátero");
+} else if (p1 !== s1 && s1 !== t1 && p1 !== t1) {
+    alert ("Seu triangulo é Escaleno");
+} else {
+    alert ("Seu triangulo é Isóseles");
+}
+   
+
