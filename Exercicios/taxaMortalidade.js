@@ -18,3 +18,38 @@
 
 //saída de dados
 // imprimir na tela a taxa de mortalidade ou natalidade
+
+// Função para calcular a taxa de natalidade
+function calcularNatalidade(numCriancasNascidas, numHabitantes) {
+    return (numCriancasNascidas * 1000) / numHabitantes;
+}
+
+// Função para calcular a taxa de mortalidade
+function calcularMortalidade(numObitos, numHabitantes) {
+    return (numObitos * 1000) / numHabitantes;
+}
+
+// Função principal
+function calcularTaxas() {
+    let escolha = prompt("Digite '1' para calcular a taxa de natalidade ou '2' para calcular a taxa de mortalidade:");
+
+    switch (escolha) {
+        case '1':
+            let numCriancasNascidas = parseInt(prompt("Digite o número de crianças nascidas:"));
+            let numHabitantesNatalidade = parseInt(prompt("Digite o número total de habitantes:"));
+            let taxaNatalidade = calcularNatalidade(numCriancasNascidas, numHabitantesNatalidade);
+            alert ("A taxa de natalidade é: " + taxaNatalidade.toFixed(2));
+            break;
+        case '2':
+            let numObitos = parseInt(prompt("Digite o número de óbitos:"));
+            let numHabitantesMortalidade = parseInt(prompt("Digite o número total de habitantes:"));
+            let taxaMortalidade = calcularMortalidade(numObitos, numHabitantesMortalidade);
+            alert ("A taxa de mortalidade é: " + taxaMortalidade.toFixed(2));
+            break;
+        default:
+            console.log("Opção inválida.");
+    }
+}
+
+// Chamando a função principal
+calcularTaxas();

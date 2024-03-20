@@ -4,12 +4,21 @@
 
 
 
+
 // - Se quantidade <= 5 o desconto será de 2%
 // - Se quantidade > 5 e quantidade <=10 o desconto será de 3%
 // - Se quantidade > 10 o desconto será de 5%
 
 // Dica: utilize if / else if / else
 
+if (`Se quantidade <= 5`) {
+    alert ("O desconto será de 2%");
+} else if (`Se quantidade > 5 e quantidade <= 10`) {
+    alert ("Desconto será de 3%");
+} else (`Se quantidade > 10`) 
+{
+    alert ("Desconto será 5%");
+}
 
 //entrada de dados
 // = criar variável para receber o nome do produto 
