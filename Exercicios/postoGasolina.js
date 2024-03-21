@@ -33,8 +33,9 @@ switch (tipoCombustivel.toUpperCase()) {
       desconto = 0.03;
     } else {
       desconto = 0.05;
-    }
-    alert (valorTotal = litros * (precoAlcool - (precoAlcool * desconto)));
+    } //saída de dados
+    valorTotal = litros * precoAlcool * (1 - desconto);
+    alert ("Valor a ser pago: R$ " + valorTotal.toFixed(2) + ". Desconto: " + (desconto * 100) + "%");
     break;
   case 'G':
     if (litros <= 20) {
@@ -42,15 +43,12 @@ switch (tipoCombustivel.toUpperCase()) {
     } else {
       desconto = 0.06;
     }
-    alert (valorTotal = litros * (precoGasolina - (precoGasolina * desconto)));
+    valorTotal = litros * precoGasolina * (1 - desconto);
+    alert ("Valor a ser pago: R$ " + valorTotal.toFixed(2) + ". Desconto: " + (desconto * 100) + "%");
     break;
   default:
     console.log("Tipo de combustível inválido!");
 }
-
-//saida de dados
-Alert (`Valor a ser pago: R$ ${valorTotal.toFixed(2)}`);
-
 
 //Aqui está um exemplo de algoritmo em linguagem pseudo-código para calcular o valor a ser pago pelo cliente, levando em consideração os descontos conforme o tipo e a quantidade de combustível:
 //Esse algoritmo solicita ao usuário o tipo de combustível e a quantidade de litros desejada, calcula o desconto apropriado com base nas condições fornecidas e, em seguida, calcula e exibe o valor total a ser pago pelo cliente.
